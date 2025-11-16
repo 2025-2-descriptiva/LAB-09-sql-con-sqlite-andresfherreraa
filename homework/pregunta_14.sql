@@ -43,19 +43,11 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --  
-SELECT
-    t1.K0,
-    AVG(t2.c21) AS avg_c21
-FROM
-    tbl1 AS t1
-JOIN
-    tbl2 AS t2
-ON
-    t1.K1 = t2.K1
-WHERE
-    t1.c13 > 400
-GROUP BY
-    t1.K0
-ORDER BY
-    t1.K0;
+SELECT K0, avg(c21)
+FROM tbl1 AS T1
+JOIN tbl2 AS T2
+ON T1.K1 = T2.K1
+WHERE T1.c13 > 400
+GROUP BY T1.K0
+ORDER BY T1.K0;
 

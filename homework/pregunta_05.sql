@@ -41,9 +41,6 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --  
-SELECT
-    *
-FROM
-    tbl0
-WHERE
-    c02 IN (100, 600);
+SELECT *
+FROM tbl0
+WHERE c02 = 100 OR co2 = 600;
